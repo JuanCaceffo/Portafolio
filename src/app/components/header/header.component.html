@@ -1,0 +1,9 @@
+<header class="header">
+  <img>
+  <nav>
+    @for (info of navInfo; track info.link) {
+      <a [routerLink]="info.link" routerLinkActive="router-link-active" >{{info.title}}</a>
+    }
+    
+  </nav>
+</header>
