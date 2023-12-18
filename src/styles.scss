@@ -9,6 +9,7 @@
   --text-color-lighter: hsla(207, 20%, 55%, 1);
   --text-color: hsla(207, 30%, 10%, 1);
   --text-color-medium: hsla(207, 25%, 35%, 1);
+  --typeface-main: 'Mulish','Open Sans', sans-serif
  /* ------------- Border Radius ------------- */
   --border-radius: 0.5rem;
   --border-radius-md: 1rem;
@@ -30,7 +31,7 @@
 html {
   font-family: var(--typeface-primary);
   font-size: 10px;
-  color: var(--text-color);
+  color: var(--text-color-2lighter);
 }
 
 button {
@@ -42,3 +43,10 @@ button {
   overflow: visible;
   padding: 0;
 }
+
+a:link, :visited, :hover, :active{
+  text-decoration: none;
+  color: var(--text-color-2lighter);
+}
+
+@import url('./app/styles/typography.scss')
