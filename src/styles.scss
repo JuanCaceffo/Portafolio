@@ -2,14 +2,15 @@
 
 :root {
   /* ------------- colors ------------- */
-  --color-primary: #12081f;
-  --color-secondary: #1A0B2E;
+  --color-violet-primary: #10091A;
+  --color-violet-secondary: #12081F;
+  --color-violet-third: #1C1623;
+  --color-violet-fourth: #0B090E;
+  --color-violet-shadow: #763CAC;
   /* ------------- Text & Typeface ------------- */
   --text-color-2lighter: hsla(207, 20%, 75%, 1);
-  --text-color-lighter: hsla(207, 20%, 55%, 1);
   --text-color: hsla(207, 30%, 10%, 1);
-  --text-color-medium: hsla(207, 25%, 35%, 1);
-  --typeface-main: 'Mulish','Open Sans', sans-serif
+  --typeface-main: 'Mulish','Open Sans', 'sans-serif'
  /* ------------- Border Radius ------------- */
   --border-radius: 0.5rem;
   --border-radius-md: 1rem;

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-burger-button',
@@ -13,10 +13,11 @@ export class BurgerButtonComponent implements OnInit {
 
   ngOnInit() {}
 
+  @Output() active = new EventEmitter<boolean>()
   isActive = false
 
-  changeStateButton() {
+  onClicked() {
     this.isActive = !this.isActive 
+    this.active.emit(this.isActive)
   }
-
 }

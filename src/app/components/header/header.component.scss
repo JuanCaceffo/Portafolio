@@ -7,13 +7,20 @@
   padding: 0 2em;
   top: 0;
   left: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-violet-secondary);
 }
+//TODO: cambiar el estilo por que queda medio fiero
+.router-link-active{
+  transform: scale(1.2);
+  color: var(--color-violet-shadow);
+}
+
 .header__mobile-button{
   display: none;
 }
 .header__navbar{
   display: flex;
+  gap: 2em;
 }
 @media (width <= 400px) {
   .header__mobile-button{
@@ -31,5 +38,12 @@
     background-color: #000000;
     clip-path: circle(0% at top right);
     transition: 0.4s ease-in-out;
+  }
+  .header__navbar.header__navbar--active {
+    clip-path: circle(150% at top right);
+  } 
+  .router-link-active{
+    background-color: var(--color-violet-third);
+    box-shadow: 0 0 20px 10px var(--color-violet-third);
   }
 }

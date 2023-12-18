@@ -1,6 +1,6 @@
 <header class="header">
-  <app-burger-button class="header__mobile-button"></app-burger-button>
-  <nav class="header__navbar">
+  <app-burger-button class="header__mobile-button" (active)="isActive = $event"></app-burger-button>
+  <nav class="header__navbar" [ngClass]="{'header__navbar--active': isActive}">
     @for (info of navInfo; track info.link) {
       <a class="title6" [routerLink]="info.link" routerLinkActive="router-link-active" >{{info.title}}</a>
     }

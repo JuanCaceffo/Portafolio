@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BurgerButtonComponent } from '../burger-button/burger-button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports:[RouterLink, RouterLinkActive, BurgerButtonComponent],
+  imports:[CommonModule, RouterLink, RouterLinkActive, BurgerButtonComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -16,6 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  isActive = false
   navInfo = [
     {
       title: 'About',
