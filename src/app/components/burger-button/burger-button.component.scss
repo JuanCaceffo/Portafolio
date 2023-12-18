@@ -1,0 +1,31 @@
+.burguer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  width: 4em;
+  height: 3em;
+  cursor: pointer;
+  
+  &.burguer--active{
+    .burger__line-middel{
+      opacity: 0;
+      width: 0;
+    }
+    .burger__line-top{
+      transform: translateY(0.90em) rotate(-45deg);
+    }
+    .burger__line-bottom{
+      transform: translateY(-0.90em) rotate(45deg);
+    }
+  }
+
+  .burger__line{
+    width: 100% ;
+    height: 0.2em;
+    border-radius: 10px;
+    background-color: white;
+   
+    transition: all 0.5s ease-out;
+  }
+}
