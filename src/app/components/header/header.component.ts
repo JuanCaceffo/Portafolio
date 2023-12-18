@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { BurgerButtonComponent } from '../burger-button/burger-button.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports:[RouterLink, RouterLinkActive],
+  imports:[RouterLink, RouterLinkActive, BurgerButtonComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
