@@ -36,4 +36,8 @@ export class HeaderComponent implements OnInit {
       link: 'contact'
     }
   ]
+
+  onClicked = () => {
+    this.isActive = !this.isActive 
+  }
 }

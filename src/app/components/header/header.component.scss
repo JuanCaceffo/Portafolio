@@ -22,7 +22,7 @@
   display: flex;
   gap: 2em;
 }
-@media (width <= 400px) {
+@media (width <= 450px) {
   .header__mobile-button{
     display: block;
   } 
@@ -37,13 +37,15 @@
     right: 0;
     background-color: #000000;
     clip-path: circle(0% at top right);
-    transition: 0.4s ease-in-out;
+    transition: clip-path 0.4s ease-in-out;
   }
   .header__navbar.header__navbar--active {
     clip-path: circle(150% at top right);
   } 
   .router-link-active{
+    color: unset;
     background-color: var(--color-violet-third);
-    box-shadow: 0 0 20px 10px var(--color-violet-third);
+    box-shadow: 0 0 20px 30px var(--color-violet-third);
+    border-radius: 50%;
   }
 }
