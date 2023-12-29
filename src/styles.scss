@@ -50,4 +50,5 @@ a:link, :visited, :hover, :active{
   color: var(--text-color-2lighter);
 }
 
-@import url('./app/styles/typography.scss')
+@import url('./app/styles/typography.scss');
+@import url('./app/styles/layout.scss')
