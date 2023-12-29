@@ -1,4 +1,5 @@
 <header class="header">
+  <h1>JC</h1>
   <app-burger-button class="header__mobile-button" [onClicked]="onClicked" [isActive]="isActive"></app-burger-button>
   <nav class="header__navbar" [ngClass]="{'header__navbar--active': isActive}">
     @for (info of navInfo; track info.link) {
