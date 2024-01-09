@@ -1,4 +1,5 @@
 .header{
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -7,6 +8,7 @@
   top: 0;
   left: 0;
   background-color: var(--color-violet-secondary);
+  z-index: 99;
 }
 //TODO: cambiar el estilo por que queda medio fiero
 .router-link-active{
@@ -20,6 +22,8 @@
 .header__navbar{
   display: flex;
   gap: 4em;
+  z-index: 99;
+
 }
 @media (width <= 450px) {
   .header{
