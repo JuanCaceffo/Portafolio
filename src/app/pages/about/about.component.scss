@@ -1,19 +1,83 @@
-.about__header{
-  width: 100%;
-  height: 30rem;
+.about{
+  padding-top: 2em;
+  gap: 3em;
+  
 }
-.about__image-bg{
+
+.about__header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 37rem;
+}
+.about__container{
   position: relative;
-  width: 20rem;
-  height: 20rem;
-  background: url('../../../assets/gradients/Gradient.png') center no-repeat;
-  background-size: contain;
-  .about__image{
-    width: 50%;
-    height: 50%;
+  width: 100%;
+
+  .about__image-bg{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    background: url('../../../assets/gradients/Gradient.png') center no-repeat;
+    background-size: contain;
+    .about__image{
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .abotu__arrow-text{
+    position: relative;
+
+    .about__arrow-image{
+      position: absolute;
+      width: 9em;
+      height: 5em;
+      left: 100px;
+      top: 15px;
+    }
+    .about__text-me{
+      position: absolute;
+      left: 180px;
+      top: 18px;
+    }
+  }
+  .about__position{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 170px;
+    top: 80px;
+  }
+
+}
+.about__content{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 30rem;
+  .about_text-proterty{
+    text-align: left;
+  }
+}
+
+@media (width >= 700px) {
+  .about{
+    display: grid;
+    grid-template-rows: auto auto ;
+    grid-template-areas:
+    'header content'
+    'info info';
+  }
+  .about__header{
+    grid-area: header;
+  }
+  .about__content{
+    grid-area: content;
+    width: 40rem;
+  }
+  .about__social-medias{
+    grid-area: info;
   }
 }
