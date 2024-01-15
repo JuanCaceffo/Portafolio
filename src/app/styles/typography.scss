@@ -2,6 +2,36 @@
   font-family: var(--typeface-main);
   font-style: normal;
 }
+.title1{
+  @include commonFont();
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 1.5rem;
+}
+.title2{
+  @include commonFont();
+  font-weight: 600;
+  font-size: 2.5em;
+  line-height: 1.5rem;
+}
+.title3{
+  @include commonFont();
+  font-weight: 600;
+  font-size: 2.25em;
+  line-height: 1.5rem;
+}
+.title4{
+  @include commonFont();
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.5rem;
+}
+.title5{
+  @include commonFont();
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1.5rem;
+}
 .title6{
   @include commonFont();
   font-weight: 600;
