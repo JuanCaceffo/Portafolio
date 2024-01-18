@@ -104,21 +104,17 @@
 }
 
 @media (width >= 700px) {
-  .about{
-    display: grid;
-    grid-template-rows: auto auto ;
-    grid-template-areas:
-    'header content'
-    'info info';
-  }
+
   .about__header{
-    grid-area: 'header';
+    width: 70rem;
   }
   .about__content{
-    grid-area: 'content';
-    width: 40rem;
+    width: 63rem;
   }
-  .about__social-medias{
-    grid-area: 'info';
+  .about__footer{
+    align-items: center;
+    .about__socila-media{
+      width: 50%;
+    }
   }
 }
