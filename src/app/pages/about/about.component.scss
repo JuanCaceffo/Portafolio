@@ -1,6 +1,6 @@
 .about{
   padding-top: 2em;
-  gap: 3em;
+  gap: 8rem;
   width: 100%;
 }
 
@@ -82,9 +82,6 @@
       
     }
   }
-  .about_wave{
-    animation: wave 20s linear infinite;
-  }
   .about__fill-wave{
     display: flex;
     flex: 1;
@@ -94,17 +91,11 @@
 
 }
 
-@keyframes wave {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(1000px);
-  }
-}
-
 @media (width >= 700px) {
-
+  .about{
+    gap: 3rem;
+    overflow-y: hidden;
+  }
   .about__header{
     width: 70rem;
   }
