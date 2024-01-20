@@ -3,7 +3,7 @@
   <app-burger-button class="header__mobile-button" [onClicked]="onClicked" [isActive]="isActive"></app-burger-button>
   <nav class="header__navbar" [ngClass]="{'header__navbar--active': isActive}">
     @for (info of navInfo; track info.link) {
-      <a i18n class="header__nav-link title6" (click)="onClicked()" [routerLink]="info.link" routerLinkActive="router-link-active" >{{info.title}}</a>
+      <a class="header__nav-link title6" (click)="onClicked()" [routerLink]="info.link" routerLinkActive="router-link-active" >{{info.title}}</a>
     }
   </nav>
 </header>
