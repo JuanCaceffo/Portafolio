@@ -43,6 +43,9 @@
       position: absolute;
       left: 180px;
       top: 18px;
+      .about__text-me-color{
+        color: var(--color-violet-fifth);
+      }
     }
   }
   .about__position{
@@ -94,7 +97,6 @@
 @media (width >= 700px) {
   .about{
     gap: 3rem;
-    overflow-y: hidden;
   }
   .about__header{
     width: 70rem;
