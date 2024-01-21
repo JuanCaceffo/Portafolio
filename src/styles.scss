@@ -6,6 +6,7 @@
   --color-violet-secondary: #1A0B2E;
   --color-violet-third: #11071F;
   --color-violet-fourth: #0B090E;
+  --color-violet-fifth: #7127BA;
   --color-violet-shadow: #763CAC;
   /* ------------- Text & Typeface ------------- */
   --text-color-2lighter: hsla(207, 20%, 75%, 1);
@@ -52,6 +53,28 @@ button {
 a:link, :visited, :hover, :active{
   text-decoration: none;
   color: var(--text-color-2lighter);
+}
+
+.file-selected-container--multipe {
+  justify-content: flex-start;
+}
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  margin: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
 }
 
 @import url('./app/styles/typography.scss');
