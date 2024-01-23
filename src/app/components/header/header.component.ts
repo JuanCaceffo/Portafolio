@@ -20,19 +20,19 @@ export class HeaderComponent implements OnInit {
   isActive = false
   navInfo = [
     {
-      title: 'About',
+      title: $localize `:{about}:Sobre mi`,
       link: 'about'
     },
     {
-      title: 'Projects',
+      title: $localize `:{project}:Proyectos`,
       link: 'projects'
     },
     {
-      title: 'Experiencie',
+      title: $localize `:{experiencie}:Experiencia`,
       link: 'experiencie'
     },
     {
-      title: 'Contact',
+      title: $localize `:{contact}:Contacto`,
       link: 'contact'
     }
   ]
