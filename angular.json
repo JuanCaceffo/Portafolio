@@ -17,7 +17,7 @@
         "sourceLocale": "es",
         "locales": {
           "en": {
-            "translation": "src/locale/messages.en.json",
+            "translation": "src/locale/en.json",
             "baseHref": "en-US"
           }
         }
@@ -91,7 +91,8 @@
           "options": {
             "buildTarget": "portafolio:build",
             "format": "json",
-            "outputPath": "src/locale"
+            "outputPath": "src/locale",
+            "outFile": "es"
           }
         },
         "test": {
