@@ -5,38 +5,34 @@
       <trans-unit id="9096042874225072964" datatype="html">
         <source> Hola! Soy <x id="START_TAG_FONT" ctype="x-font" equiv-text="&lt;font class=&quot;about__text-me-color&quot;&gt;"/>Juan Caceffo<x id="CLOSE_TAG_FONT" ctype="x-font" equiv-text="&lt;/font&gt;"/></source>
         <target> Hello! I am <x id="START_TAG_FONT" ctype="x-font" equiv-text="&lt;font class=&quot;about__text-me-color&quot;&gt;"/>Juan Caceffo<x id="CLOSE_TAG_FONT" ctype="x-font" equiv-text="&lt;/font&gt;"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.component.html</context>
-          <context context-type="linenumber">7,9</context>
-        </context-group>
-        <note priority="1" from="description">greeting</note>
       </trans-unit>
       <trans-unit id="758503011975974329" datatype="html">
         <source> Soy Desarrollador de software Full stack. </source>
         <target> I am a Full Stack Software Developer. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.component.html</context>
-          <context context-type="linenumber">14,16</context>
-        </context-group>
-        <note priority="1" from="description">position</note>
       </trans-unit>
       <trans-unit id="7355730508088204244" datatype="html">
         <source> Un poco sobre mi... </source>
         <target> A little about me... </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.component.html</context>
-          <context context-type="linenumber">23,25</context>
-        </context-group>
-        <note priority="1" from="description">description title</note>
       </trans-unit>
       <trans-unit id="6605436177159653974" datatype="html">
         <source> Soy un individuo comprometido con un continuo proceso de desarrollo, caracterizado por mi responsabilidad, organización y proactividad. Mi inquebrantable pasión por el aprendizaje, junto con mi destreza para la comunicación efectiva y la resolución de problemas, me impulsa hacia una constante evolución y crecimiento. Estoy en búsqueda activa de oportunidades que me desafíen y me permitan contribuir con mi capacidad de adaptación y creatividad, siempre orientado hacia el logro de objetivos y la excelencia. </source>
         <target> I am an individual committed to a continuous development process, characterized by my responsibility, organization, and proactivity. My unwavering passion for learning, along with my skill in effective communication and problem-solving, drives me towards constant evolution and growth. I am actively seeking opportunities that challenge me and allow me to contribute with my adaptability and creativity, always oriented towards achieving goals and excellence. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.component.html</context>
-          <context context-type="linenumber">26,33</context>
-        </context-group>
-        <note priority="1" from="description">content description</note>
+      </trans-unit>
+      <trans-unit id="7218075423554070735" datatype="html">
+        <source>Sobre mi</source>
+        <target state="new">About me</target>
+      </trans-unit>
+      <trans-unit id="1872099000671699527" datatype="html">
+        <source>Proyectos</source>
+        <target state="new">Projects</target>
+      </trans-unit>
+      <trans-unit id="3839418929735297411" datatype="html">
+        <source>Experiencia</source>
+        <target state="new">Experience</target>
+      </trans-unit>
+      <trans-unit id="8433768950518578342" datatype="html">
+        <source>Contacto</source>
+        <target state="new">Contact</target>
       </trans-unit>
     </body>
   </file>
