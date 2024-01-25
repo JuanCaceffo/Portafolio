@@ -7,6 +7,7 @@ import {
   TranslocoService,
   translate,
 } from '@ngneat/transloco'
+import { langAvilableTypes } from '../../app.config'
 
 @Component({
   selector: 'app-header',
@@ -27,6 +28,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   isActive = false
+  langInfo:{src:string, lang:langAvilableTypes }[] = [
+    { src: '/assets/imgs/espana.png', lang: 'es' },
+    { src: '/assets/imgs/reino-unido.png', lang: 'en' },
+  ]
   navInfo = [
     {
       langKey: 'about',
@@ -49,7 +54,7 @@ export class HeaderComponent implements OnInit {
   onClicked = () => {
     this.isActive = !this.isActive
   }
-  changeLanguague = (lang: 'es' | 'en') => {
+  changeLanguague = (lang: langAvilableTypes) => {
     this.translocoService.setActiveLang(lang)
     this.onClicked()
   }

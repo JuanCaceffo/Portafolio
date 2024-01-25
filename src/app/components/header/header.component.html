@@ -20,9 +20,9 @@
     >
     }
     <section class="header__langs">
-      @for (src of ['/assets/imgs/espana.png','/assets/imgs/reino-unido.png']; track $index) {
-        <button class="header__language-btn" (click)="changeLanguague('es')">
-          <img src={{src}} />
+      @for (info of langInfo; track info.lang) {
+        <button class="header__language-btn" (click)="changeLanguague(info.lang)">
+          <img src={{info.src}} />
         </button>
       }
     </section>
