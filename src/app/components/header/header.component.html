@@ -1,9 +1,29 @@
 <header class="header">
   <h1>JC</h1>
-  <app-burger-button class="header__mobile-button" [onClicked]="onClicked" [isActive]="isActive"></app-burger-button>
-  <nav class="header__navbar" [ngClass]="{'header__navbar--active': isActive}">
+  <app-burger-button
+    class="header__mobile-button"
+    [onClicked]="onClicked"
+    [isActive]="isActive"
+  ></app-burger-button>
+  <nav
+    class="header__navbar"
+    [ngClass]="{ 'header__navbar--active': isActive }"
+    *transloco="let t; read: 'header'"
+    >
     @for (info of navInfo; track info.link) {
-      <a class="header__nav-link title6" (click)="onClicked()" [routerLink]="info.link" routerLinkActive="router-link-active" >{{info.title}}</a>
+    <a
+      class="header__nav-link title6"
+      (click)="onClicked()"
+      [routerLink]="info.link"
+      routerLinkActive="router-link-active"
+      >{{ t(info.langKey) }}</a
+    >
     }
+    <button (click)="changeLanguague('es')">
+      <img src="/assets/imgs/espana.png" />
+    </button>
+    <button (click)="changeLanguague('en')">
+      <img src="/assets/imgs/reino-unido.png" />
+    </button>
   </nav>
 </header>

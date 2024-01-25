@@ -1,54 +1,49 @@
-import { TranslocoHandlerEventsService } from './../../data/services/transloco-handler-events.service';
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BurgerButtonComponent } from '../burger-button/burger-button.component';
 import { CommonModule } from '@angular/common';
-import { translate } from '@ngneat/transloco'
+import { TranslocoDirective, TranslocoService, translate } from '@ngneat/transloco'
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports:[CommonModule, RouterLink, RouterLinkActive, BurgerButtonComponent],
+  imports:[CommonModule, RouterLink, RouterLinkActive, BurgerButtonComponent, TranslocoDirective],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private translocoHandlerEvent: TranslocoHandlerEventsService) { }
+  constructor(private translocoService: TranslocoService) { }
 
-  destroyRef = inject(DestroyRef);
   ngOnInit() {
-    const subscription$ = this.translocoHandlerEvent.translationLoadSucces().subscribe(() => {
-      this.navInfo.forEach(item => item.title = translate(`header.${item.title}`))   
-    })
-    this.destroyRef.onDestroy(() => {
-      subscription$.unsubscribe()
-    }) 
   }
   
 
   isActive = false
   navInfo = [
     {
-      title: 'about',
+      langKey: 'about',
       link: 'about'
     },
     {
-      title: 'project',
+      langKey: 'project',
       link: 'projects'
     },
     {
-      title: 'experience',
+      langKey: 'experience',
       link: 'experience'
     },
     {
-      title: 'contact',
+      langKey: 'contact',
       link: 'contact'
     }
   ]
 
   onClicked = () => {
     this.isActive = !this.isActive 
+  }
+  changeLanguague = (lang: 'es'|'en') => {
+    this.translocoService.setActiveLang(lang)
   }
 }

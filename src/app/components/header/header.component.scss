@@ -23,7 +23,7 @@
   display: flex;
   gap: 4em;
   z-index: 99;
-
+  align-items: center;
 }
 @media (width <= 450px) {
   .header{
