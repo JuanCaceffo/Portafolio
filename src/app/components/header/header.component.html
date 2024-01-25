@@ -19,11 +19,12 @@
       >{{ t(info.langKey) }}</a
     >
     }
-    <button (click)="changeLanguague('es')">
-      <img src="/assets/imgs/espana.png" />
-    </button>
-    <button (click)="changeLanguague('en')">
-      <img src="/assets/imgs/reino-unido.png" />
-    </button>
+    <section class="header__langs">
+      @for (src of ['/assets/imgs/espana.png','/assets/imgs/reino-unido.png']; track $index) {
+        <button class="header__language-btn" (click)="changeLanguague('es')">
+          <img src={{src}} />
+        </button>
+      }
+    </section>
   </nav>
 </header>
