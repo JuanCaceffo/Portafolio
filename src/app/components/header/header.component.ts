@@ -1,5 +1,5 @@
 import { TranslocoHandlerEventsService } from './../../data/services/transloco-handler-events.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BurgerButtonComponent } from '../burger-button/burger-button.component';
 import { CommonModule } from '@angular/common';
@@ -17,11 +17,16 @@ export class HeaderComponent implements OnInit {
 
   constructor(private translocoHandlerEvent: TranslocoHandlerEventsService) { }
 
+  destroyRef = inject(DestroyRef);
   ngOnInit() {
-    this.translocoHandlerEvent.translationLoadSucces().subscribe(() => {
+    const subscription$ = this.translocoHandlerEvent.translationLoadSucces().subscribe(() => {
       this.navInfo.forEach(item => item.title = translate(`header.${item.title}`))   
     })
+    this.destroyRef.onDestroy(() => {
+      subscription$.unsubscribe()
+    }) 
   }
+  
 
   isActive = false
   navInfo = [
