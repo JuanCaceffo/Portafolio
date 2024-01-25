@@ -1,13 +1,14 @@
 {
-  "locale": "en",
-  "translations": {
-    "7218075423554070735": "About me",
-    "1872099000671699527": "projects",
-    "3839418929735297411": "Experience",
-    "8433768950518578342": "Contact",
-    "9096042874225072964": " Hello! I am {$START_TAG_FONT}Juan Caceffo{$CLOSE_TAG_FONT}",
-    "758503011975974329": " I am a Full Stack Software Developer. ",
-    "7355730508088204244": " A little about me... ",
-    "4790079776111314223": " I am an individual committed to a continuous development process, characterized by my responsibility, organization, and proactivity. My unwavering passion for learning, along with my skill in effective communication and problem-solving, drives me towards constant evolution and growth. I am actively seeking opportunities that challenge me and allow me to contribute with my adaptability and creativity, always oriented towards achieving goals and excellence. "
+  "header":{
+    "about": "About me",
+    "project": "projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "about": {
+    "greeting": " Hello! I am ",
+    "postion": " I am a Full Stack Software Developer. ",
+    "desc-title": " A little about me... ",
+    "description": " I am an individual committed to a continuous development process, characterized by my responsibility, organization, and proactivity. My unwavering passion for learning, along with my skill in effective communication and problem-solving, drives me towards constant evolution and growth. I am actively seeking opportunities that challenge me and allow me to contribute with my adaptability and creativity, always oriented towards achieving goals and excellence. "
   }
 }

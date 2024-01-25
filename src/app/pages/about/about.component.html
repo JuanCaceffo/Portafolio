@@ -1,36 +1,27 @@
-<main class="layout_content about">
+<main class="layout_content about" *transloco="let t; read: 'about'">
   <header class="about__header">
     <figure class="about__container">
       <figure class="abotu__arrow-text">
         <img class="about__arrow-image" src="/assets/imgs/Arrow.png" />
-        <p i18n="greeting" class="about__text-me body1">
-          Hola! Soy <font class="about__text-me-color">Juan Caceffo</font>
+        <p class="about__text-me body1">
+          {{ t('greeting') }}
+          <font class="about__text-me-color">Juan Caceffo</font>
         </p>
       </figure>
       <figure class="about__image-bg">
         <img class="about__image" src="/assets/imgs/Me.png" />
       </figure>
-      <h1 i18n="position" class="about__position title6">
-        Soy Desarrollador de software Full stack.
+      <h1 class="about__position title6">
+        {{ t('postion') }}
       </h1>
     </figure>
   </header>
   <section class="about__content">
-    <h1
-      i18n="description title"
-      class="title4 about__content-title about_text-proterty"
-    >
-      Un poco sobre mi...
+    <h1 class="title4 about__content-title about_text-proterty">
+      {{ t('desc-title') }}
     </h1>
-    <article i18n="content description" class="body1 about_text-proterty">
-      Soy una persona comprometida con un continuo proceso de desarrollo,
-      caracterizado por mi responsabilidad, organización y proactividad. Mi
-      inquebrantable pasión por el aprendizaje, junto con mi destreza para la
-      comunicación efectiva y la resolución de problemas, me impulsa hacia una
-      constante evolución y crecimiento. Estoy en búsqueda activa de
-      oportunidades que me desafíen y me permitan contribuir con mi capacidad de
-      adaptación y creatividad, siempre orientado hacia el logro de objetivos y
-      la excelencia.
+    <article class="body1 about_text-proterty">
+      {{ t('description') }}
     </article>
   </section>
   <footer class="about__footer">

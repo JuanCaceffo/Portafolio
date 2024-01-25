@@ -1,7 +1,10 @@
+import { TranslocoHandlerEventsService } from './../../data/services/transloco-handler-events.service';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BurgerButtonComponent } from '../burger-button/burger-button.component';
 import { CommonModule } from '@angular/common';
+import { translate } from '@ngneat/transloco'
+
 
 @Component({
   selector: 'app-header',
@@ -12,27 +15,30 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translocoHandlerEvent: TranslocoHandlerEventsService) { }
 
   ngOnInit() {
+    this.translocoHandlerEvent.translationLoadSucces().subscribe(() => {
+      this.navInfo.forEach(item => item.title = translate(`header.${item.title}`))   
+    })
   }
 
   isActive = false
   navInfo = [
     {
-      title: $localize `:{about}:Sobre mi`,
+      title: 'about',
       link: 'about'
     },
     {
-      title: $localize `:{project}:Proyectos`,
+      title: 'project',
       link: 'projects'
     },
     {
-      title: $localize `:{experiencie}:Experiencia`,
-      link: 'experiencie'
+      title: 'experience',
+      link: 'experience'
     },
     {
-      title: $localize `:{contact}:Contacto`,
+      title: 'contact',
       link: 'contact'
     }
   ]
