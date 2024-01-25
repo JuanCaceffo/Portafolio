@@ -7,7 +7,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 export const routes: Routes = [
   {path: 'about', component: AboutComponent, title: 'About'},
   {path: 'projects', component: ProjectsComponent, title: 'Projects'},
-  {path: 'experiencie', component: ExperienceComponent, title: 'Experiencie'},
+  {path: 'experience', component: ExperienceComponent, title: 'Experiencie'},
   {path: 'contact', component: ContactComponent, title: 'Contact'},
   {path: '', redirectTo:'/about', pathMatch: 'full'},
   //TODO: agregar pagina notFound
