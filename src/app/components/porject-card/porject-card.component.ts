@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core'
   imports: [CommonModule],
   selector: 'app-porject-card',
   templateUrl: './porject-card.component.html',
-  styleUrls: ['./porject-card.component.css'],
+  styleUrls: ['./porject-card.component.scss'],
 })
 export class PorjectCardComponent implements OnInit {
   constructor() {}
