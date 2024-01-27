@@ -2,15 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* position: relative; */
   width: 30rem;
-  /* height: 30rem; */
+  height: 50rem;
   .pjt-card__content{
     display: flex;
     flex-direction: column;
     gap: 2em;
-    /* position: absolute; */
-    /* top: 0; */
     z-index: 2;
     .pjt-card__type{
       color: var(--color-violet-fifth);
@@ -22,28 +19,34 @@
     }
   }
   .pjt-card__ilstration{
-    /* position: absolute; */
-    /* bottom: 0; */
     width: 100%;
     height: 70%;
-    margin-top: -55px;
+    margin-top: -8em;
     .pjt-card__container{
       position: relative;
       height: 100%;
 
       .pjt-card__grad{
         position: absolute;
-        width: 200px;
-        height: 200px;
+        height: 40em;
         z-index: 0;
+        top: 50%;
+        transform: translate(0,-50%);
         
       }
       .pjt-card__grad--2{
         right: 0;
       }
-
       .pjt-card__img{
+        width: 90%;
+        height: 20em;
+        border-radius: 1em;
+        object-fit: cover;
+        position: absolute;
         z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
     }
   }
