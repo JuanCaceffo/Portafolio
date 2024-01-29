@@ -11,7 +11,7 @@
     "desc-title": " A little about me... ",
     "description": " I am an individual committed to a continuous development process, characterized by my responsibility, organization, and proactivity. My unwavering passion for learning, along with my skill in effective communication and problem-solving, drives me towards constant evolution and growth. I am actively seeking opportunities that challenge me and allow me to contribute with my adaptability and creativity, always oriented towards achieving goals and excellence. "
   },
-  "projects": {
+  "project-card": {
     "repo": "Repository",
     "deploy": "Deploy"
   }
