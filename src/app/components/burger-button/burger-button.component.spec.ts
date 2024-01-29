@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { BurgerButtonComponent } from './burger-button.component';
+import { providers } from '../../app.config';
 
 describe('BurgerButtonComponent', () => {
   let component: BurgerButtonComponent;
@@ -11,7 +12,8 @@ describe('BurgerButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BurgerButtonComponent ]
+      imports: [ BurgerButtonComponent ],
+      providers : providers
     })
     .compileComponents();
   }));

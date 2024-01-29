@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AboutComponent } from './about.component';
+import { providers } from '../../app.config';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -11,7 +12,8 @@ describe('AboutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      imports: [ AboutComponent ],
+      providers: providers
     })
     .compileComponents();
   }));
