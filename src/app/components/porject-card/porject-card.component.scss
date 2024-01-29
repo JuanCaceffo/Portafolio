@@ -13,9 +13,19 @@
       color: var(--color-violet-fifth);
     }
     .pjt-card__description{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
       background-color: #a9a5a516;
       padding: 2em;
       border-radius: 1em;
+    }
+    .pjt-card__desc-links{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      font-size: 1.1em;
     }
   }
   .pjt-card__ilstration{
