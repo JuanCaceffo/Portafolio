@@ -1,6 +1,8 @@
 //TODO: change this when the API accept languaje requests
 
-interface CardProjectDTO{
+import { LanguagesAccepted } from "./LanguagesAccepted"
+
+export interface CardProjectDTO{
   pjtType: LanguagesAccepted
   title: LanguagesAccepted
   content: {

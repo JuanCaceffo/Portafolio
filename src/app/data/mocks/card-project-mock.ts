@@ -1,3 +1,5 @@
+import { CardProjectDTO } from "../interfaces/CardProjectDTO";
+
 export const projectCardData: CardProjectDTO[] = [
   {
     pjtType: { es: 'Aplicacion web', en: 'Web App' },

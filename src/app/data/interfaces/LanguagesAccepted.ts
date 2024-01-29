@@ -1,4 +1,4 @@
-interface LanguagesAccepted{
+export interface LanguagesAccepted{
   es: string
   en: string
 }
