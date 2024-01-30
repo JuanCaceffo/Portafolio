@@ -24,6 +24,7 @@ export class ProjectCardComponent implements OnInit {
       this.cardData.content.description
     )
   }
+  @Input() reverse: boolean = false
   @Input() Identifier: number = 0
   @Input() cardData: CardProjectDTO = {} as CardProjectDTO
   linksInfo: { key: 'repo' | 'deploy'; class: string }[] = [
@@ -37,6 +38,7 @@ export class ProjectCardComponent implements OnInit {
     },
   ]
 
+  classReverse = {'reverse': this.reverse}
   setTransalation(transKey: string, value: LanguagesAccepted) {
     Object.entries(value).forEach(([key, value]) => {
       this.translocoService.setTranslationKey(transKey, value, key)

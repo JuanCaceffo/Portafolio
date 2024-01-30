@@ -1,10 +1,10 @@
-<article class="pjt-card" *transloco="let t; read: 'project-card'">
-  <section class="pjt-card__content">
+<article class="pjt-card" [ngClass]="classReverse" *transloco="let t; read: 'project-card'">
+  <section class="pjt-card__content" [ngClass]="classReverse">
     <header class="pjt-card__header">
-      <h6 class="pjt-card__type subtitle2">{{ t('pjtTitle-'+this.Identifier) }}</h6>
+      <h6 class="pjt-card__type subtitle2" [ngClass]="classReverse">{{ t('pjtTitle-'+this.Identifier) }}</h6>
       <h1 class="pjt-card__title title2">{{ t('title-'+this.Identifier) }}</h1>
     </header>
-    <section class="pjt-card__description body2">
+    <section class="pjt-card__description body2" [ngClass]="classReverse">
       <span>
         {{ t('description-'+this.Identifier) }}
       </span>
@@ -17,10 +17,10 @@
       }
     </section>
   </section>
-  <section  class="pjt-card__ilstration">
+  <section  class="pjt-card__ilstration" [ngClass]="classReverse">
     <figure class="pjt-card__container">
       <figure class="pjt-card__img-container">
-        <img class="pjt-card__img" [src]="cardData.img" />
+        <img class="pjt-card__img" [ngClass]="classReverse" [src]="cardData.img" />
       </figure>
       <img
         src="/assets/gradients/Gradient.png"
