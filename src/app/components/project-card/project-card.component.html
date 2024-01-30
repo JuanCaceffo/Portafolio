@@ -2,7 +2,7 @@
   <section class="pjt-card__content">
     <header class="pjt-card__header">
       <h6 class="pjt-card__type subtitle2">{{ t('pjtTitle-'+this.Identifier) }}</h6>
-      <h1 class="pjt-card__title title1">{{ t('title-'+this.Identifier) }}</h1>
+      <h1 class="pjt-card__title title2">{{ t('title-'+this.Identifier) }}</h1>
     </header>
     <section class="pjt-card__description body2">
       <span>
@@ -10,7 +10,7 @@
       </span>
       @for (item of linksInfo; track item.key) { 
         @if (!!cardData.content[item.key]) {
-          <a [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData.content[item.key]">
+          <a [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData.content[item.key]" target="_blank">
             <i class="pjt-card__desc-links {{item.class}}">{{ t(item.key) }}</i>
           </a>
         } 

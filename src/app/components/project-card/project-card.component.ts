@@ -25,18 +25,7 @@ export class ProjectCardComponent implements OnInit {
     )
   }
   @Input() Identifier: number = 0
-  @Input() cardData: CardProjectDTO = {
-    pjtType: { es: 'odio euismod', en: 'pjt-title' },
-    title: { es: 'amet facilisis', en: 'title' },
-    content: {
-      description: {
-        es: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh ipsum consequat nisl vel pretium lectus quam. Turpis nunc eget lorem dolor sed. Et odiopellentesque diam volutpat commodo sed egestas egestas fringilla.',
-        en: 'description',
-      },
-      repo:'sdad'
-    },
-    img: '/assets/mocks-imgs/pjt/wordlCapp.jpeg',
-  }
+  @Input() cardData: CardProjectDTO = {} as CardProjectDTO
   linksInfo: { key: 'repo' | 'deploy'; class: string }[] = [
     {
       key: 'repo',
