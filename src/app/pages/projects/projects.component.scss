@@ -1,4 +1,6 @@
-.projects{
-  gap: 5em;
-  padding-top: 4em;
+@media (width >= 700px) {
+  .projects{
+    gap: 5em;
+    padding-top: 4em;
+  }
 }
