@@ -17,9 +17,12 @@ export class PorjectCardComponent implements OnInit {
   constructor(private translocoService: TranslocoService) {}
 
   ngOnInit() {
-    this.setTransalation('project-card.pjtTitle',this.cardData.pjtType)  
+    this.setTransalation('project-card.pjtTitle', this.cardData.pjtType)
     this.setTransalation('project-card.title', this.cardData.title)
-    this.setTransalation('project-card.description', this.cardData.content.description)
+    this.setTransalation(
+      'project-card.description',
+      this.cardData.content.description
+    )
   }
   @Input() cardData: CardProjectDTO = {
     pjtType: { es: 'odio euismod', en: 'pjt-title' },
@@ -29,13 +32,24 @@ export class PorjectCardComponent implements OnInit {
         es: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh ipsum consequat nisl vel pretium lectus quam. Turpis nunc eget lorem dolor sed. Et odiopellentesque diam volutpat commodo sed egestas egestas fringilla.',
         en: 'description',
       },
+      repo:'sdad'
     },
     img: '/assets/mocks-imgs/pjt/wordlCapp.jpeg',
   }
+  linksInfo: { key: 'repo' | 'deploy'; class: string }[] = [
+    {
+      key: 'repo',
+      class: 'fa-brands fa-github',
+    },
+    {
+      key: 'deploy',
+      class: 'fa-solid fa-rocket',
+    },
+  ]
 
-  setTransalation(transKey:string,value:LanguagesAccepted) {
-      Object.entries(value).forEach(([key,value]) => {
-        this.translocoService.setTranslationKey(transKey,value,key)
-      })
+  setTransalation(transKey: string, value: LanguagesAccepted) {
+    Object.entries(value).forEach(([key, value]) => {
+      this.translocoService.setTranslationKey(transKey, value, key)
+    })
   }
 }

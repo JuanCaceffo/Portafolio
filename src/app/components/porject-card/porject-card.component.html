@@ -8,19 +8,16 @@
       <span>
         {{ t('description') }}
       </span>
-      @if (!!cardData.content.repo) {
-      <a [href]="cardData.content.repo">
-        <i class="pjt-card__desc-links fa-brands fa-github">{{t('repo')}}</i>
-      </a>
-      } @if (!!cardData.content.deploy) {
-      <a [href]="cardData.content.deploy">
-        <i class="pjt-card__desc-links fa-solid fa-rocket">{{t('deploy')}}</i>
-      </a>
+      @for (item of linksInfo; track item.key) { 
+        @if (!!cardData.content[item.key]) {
+          <a [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData.content[item.key]">
+            <i class="pjt-card__desc-links {{item.class}}">{{ t(item.key) }}</i>
+          </a>
+        } 
       }
     </section>
-    <footer class="pjt-card__links"></footer>
   </section>
-  <section class="pjt-card__ilstration">
+  <section  class="pjt-card__ilstration">
     <figure class="pjt-card__container">
       <img class="pjt-card__img" [src]="cardData.img" />
       <img
