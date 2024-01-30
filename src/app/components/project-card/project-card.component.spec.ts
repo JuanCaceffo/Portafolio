@@ -1,27 +1,27 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { PorjectCardComponent } from './porject-card.component'
+import { ProjectCardComponent } from './project-card.component'
 import { CommonModule } from '@angular/common'
 import { TranslocoDirective } from '@ngneat/transloco'
 import { providers } from '../../app.config'
 import { projectCardData } from '../../data/mocks/card-project-mock'
 import { TestingHelper } from '../../utils/TestingHelper'
 
-describe('PorjectCardComponent', () => {
-  let component: PorjectCardComponent
-  let fixture: ComponentFixture<PorjectCardComponent>
-  let testingHelper: TestingHelper<PorjectCardComponent>
+describe('ProjectCardComponent', () => {
+  let component: ProjectCardComponent
+  let fixture: ComponentFixture<ProjectCardComponent>
+  let testingHelper: TestingHelper<ProjectCardComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [CommonModule, TranslocoDirective, PorjectCardComponent],
+      imports: [CommonModule, TranslocoDirective, ProjectCardComponent],
       providers: [...providers],
     }).compileComponents()
   }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PorjectCardComponent)
+    fixture = TestBed.createComponent(ProjectCardComponent)
     component = fixture.componentInstance
     testingHelper = TestingHelper.createHelper(fixture)
     fixture.detectChanges()

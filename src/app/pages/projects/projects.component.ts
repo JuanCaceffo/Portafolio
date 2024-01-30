@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { PorjectCardComponent } from '../../components/porject-card/porject-card.component';
+import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, PorjectCardComponent],
+  imports: [CommonModule, ProjectCardComponent],
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']

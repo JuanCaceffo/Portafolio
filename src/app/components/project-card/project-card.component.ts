@@ -9,11 +9,11 @@ import { LanguagesAccepted } from '../../data/interfaces/LanguagesAccepted'
 @Component({
   standalone: true,
   imports: [CommonModule, TranslocoDirective],
-  selector: 'app-porject-card',
-  templateUrl: './porject-card.component.html',
-  styleUrls: ['./porject-card.component.scss'],
+  selector: 'app-project-card',
+  templateUrl: './project-card.component.html',
+  styleUrls: ['./project-card.component.scss'],
 })
-export class PorjectCardComponent implements OnInit {
+export class ProjectCardComponent implements OnInit {
   constructor(private translocoService: TranslocoService) {}
 
   ngOnInit() {
