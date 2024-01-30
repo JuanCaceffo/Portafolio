@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
+import { ProjectService } from '../../data/services/project.service';
+import { CardProjectDTO } from '../../data/interfaces/CardProjectDTO';
 
 @Component({
   standalone: true,
@@ -11,9 +13,12 @@ import { ProjectCardComponent } from '../../components/project-card/project-card
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.projectService.getAll().then((value) => {
+      this.projectCards = value
+    })
   }
-
+  projectCards: CardProjectDTO[] = []
 }

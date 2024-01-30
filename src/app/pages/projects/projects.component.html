@@ -1,3 +1,5 @@
-<main class="layout_content">
-  <app-project-card></app-project-card>
+<main class="layout_content projects">
+  @for (card of projectCards; track card.img) {
+    <app-project-card [cardData]="card" [Identifier]="$index"/>
+  }
 </main>
