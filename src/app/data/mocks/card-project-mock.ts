@@ -25,6 +25,6 @@ export const projectCardData: CardProjectDTO[] = [
       repo: 'https://github.com/JuanCaceffo/worldcapp-2023-admin',
       deploy: 'https://worldcapp-2023-admin.onrender.com/'
     },
-    img: '/assets/mocks-imgs/pjt/wordlCapp.jpeg',
+    img: '/assets/mocks-imgs/pjt/worldCappAdmin.png',
   },
 ] 
