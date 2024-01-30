@@ -1,12 +1,12 @@
 <article class="pjt-card" *transloco="let t; read: 'project-card'">
   <section class="pjt-card__content">
     <header class="pjt-card__header">
-      <h6 class="pjt-card__type subtitle2">{{ t('pjtTitle') }}</h6>
-      <h1 class="pjt-card__title title1">{{ t('title') }}</h1>
+      <h6 class="pjt-card__type subtitle2">{{ t('pjtTitle-'+this.Identifier) }}</h6>
+      <h1 class="pjt-card__title title1">{{ t('title-'+this.Identifier) }}</h1>
     </header>
     <section class="pjt-card__description body2">
       <span>
-        {{ t('description') }}
+        {{ t('description-'+this.Identifier) }}
       </span>
       @for (item of linksInfo; track item.key) { 
         @if (!!cardData.content[item.key]) {

@@ -17,13 +17,14 @@ export class ProjectCardComponent implements OnInit {
   constructor(private translocoService: TranslocoService) {}
 
   ngOnInit() {
-    this.setTransalation('project-card.pjtTitle', this.cardData.pjtType)
-    this.setTransalation('project-card.title', this.cardData.title)
+    this.setTransalation(`project-card.pjtTitle-${this.Identifier}`, this.cardData.pjtType)
+    this.setTransalation(`project-card.title-${this.Identifier}`, this.cardData.title)
     this.setTransalation(
-      'project-card.description',
+      `project-card.description-${this.Identifier}`,
       this.cardData.content.description
     )
   }
+  @Input() Identifier: number = 0
   @Input() cardData: CardProjectDTO = {
     pjtType: { es: 'odio euismod', en: 'pjt-title' },
     title: { es: 'amet facilisis', en: 'title' },
