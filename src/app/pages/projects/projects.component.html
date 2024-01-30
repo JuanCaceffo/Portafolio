@@ -1,5 +1,5 @@
 <main class="layout_content projects">
   @for (card of projectCards; track card.img) {
-    <app-project-card [cardData]="card" [Identifier]="$index"/>
+    <app-project-card [cardData]="card" [identifier]="$index" [reverse]="($index) % 2 == 0"/>
   }
 </main>

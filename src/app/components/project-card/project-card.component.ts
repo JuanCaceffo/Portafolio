@@ -17,15 +17,15 @@ export class ProjectCardComponent implements OnInit {
   constructor(private translocoService: TranslocoService) {}
 
   ngOnInit() {
-    this.setTransalation(`project-card.pjtTitle-${this.Identifier}`, this.cardData.pjtType)
-    this.setTransalation(`project-card.title-${this.Identifier}`, this.cardData.title)
+    this.setTransalation(`project-card.pjtTitle-${this.identifier}`, this.cardData.pjtType)
+    this.setTransalation(`project-card.title-${this.identifier}`, this.cardData.title)
     this.setTransalation(
-      `project-card.description-${this.Identifier}`,
+      `project-card.description-${this.identifier}`,
       this.cardData.content.description
     )
   }
   @Input() reverse: boolean = false
-  @Input() Identifier: number = 0
+  @Input() identifier: number = 0
   @Input() cardData: CardProjectDTO = {} as CardProjectDTO
   linksInfo: { key: 'repo' | 'deploy'; class: string }[] = [
     {
@@ -38,7 +38,7 @@ export class ProjectCardComponent implements OnInit {
     },
   ]
 
-  classReverse = {'reverse': this.reverse}
+  classReverse() {return {'reverse': this.reverse}}
   setTransalation(transKey: string, value: LanguagesAccepted) {
     Object.entries(value).forEach(([key, value]) => {
       this.translocoService.setTranslationKey(transKey, value, key)

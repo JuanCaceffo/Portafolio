@@ -1,12 +1,12 @@
-<article class="pjt-card" [ngClass]="classReverse" *transloco="let t; read: 'project-card'">
-  <section class="pjt-card__content" [ngClass]="classReverse">
+<article class="pjt-card" [ngClass]="classReverse()" *transloco="let t; read: 'project-card'">
+  <section class="pjt-card__content" [ngClass]="classReverse()">
     <header class="pjt-card__header">
-      <h6 class="pjt-card__type subtitle2" [ngClass]="classReverse">{{ t('pjtTitle-'+this.Identifier) }}</h6>
-      <h1 class="pjt-card__title title2">{{ t('title-'+this.Identifier) }}</h1>
+      <h6 class="pjt-card__type subtitle2" [ngClass]="classReverse()">{{ t('pjtTitle-'+this.identifier) }}</h6>
+      <h1 class="pjt-card__title title2">{{ t('title-'+this.identifier) }}</h1>
     </header>
-    <section class="pjt-card__description body2" [ngClass]="classReverse">
+    <section class="pjt-card__description body2" [ngClass]="classReverse()">
       <span>
-        {{ t('description-'+this.Identifier) }}
+        {{ t('description-'+this.identifier) }}
       </span>
       @for (item of linksInfo; track item.key) { 
         @if (!!cardData.content[item.key]) {
@@ -17,10 +17,10 @@
       }
     </section>
   </section>
-  <section  class="pjt-card__ilstration" [ngClass]="classReverse">
+  <section  class="pjt-card__ilstration" [ngClass]="classReverse()">
     <figure class="pjt-card__container">
       <figure class="pjt-card__img-container">
-        <img class="pjt-card__img" [ngClass]="classReverse" [src]="cardData.img" />
+        <img class="pjt-card__img" [ngClass]="classReverse()" [src]="cardData.img" />
       </figure>
       <img
         src="/assets/gradients/Gradient.png"
