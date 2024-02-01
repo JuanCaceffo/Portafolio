@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core'
 import { CardProjectDTO } from '../../data/interfaces/CardProjectDTO'
 import { TranslocoDirective, TranslocoService } from '@ngneat/transloco'
 import { LanguagesAccepted } from '../../data/interfaces/LanguagesAccepted'
+import { emptyPrjtCardData } from '../../data/mocks/card-project-mock'
 
 //TODO: adaptar traduccion cundo este listo el back con respuesta traducida
 

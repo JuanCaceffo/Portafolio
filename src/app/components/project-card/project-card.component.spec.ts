@@ -1,12 +1,12 @@
+import { emptyPrjtCardData } from './../../data/mocks/card-project-mock';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
 import { ProjectCardComponent } from './project-card.component'
 import { CommonModule } from '@angular/common'
 import { TranslocoDirective } from '@ngneat/transloco'
-import { providers } from '../../app.config'
-import { projectCardData } from '../../data/mocks/card-project-mock'
 import { TestingHelper } from '../../utils/TestingHelper'
+import { getTranslocoModule } from '../../utils/TestConfiguration';
 
 describe('ProjectCardComponent', () => {
   let component: ProjectCardComponent
@@ -15,14 +15,14 @@ describe('ProjectCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [CommonModule, TranslocoDirective, ProjectCardComponent],
-      providers: [...providers],
+      imports: [CommonModule, TranslocoDirective, getTranslocoModule()],
     }).compileComponents()
   }))
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProjectCardComponent)
     component = fixture.componentInstance
+    component.cardData = emptyPrjtCardData
     testingHelper = TestingHelper.createHelper(fixture)
     fixture.detectChanges()
   })
@@ -32,8 +32,6 @@ describe('ProjectCardComponent', () => {
   })
 
   it('A project card component without repo and deploy data do not show these elements', () => {
-    component.cardData = projectCardData[0]
-    fixture.detectChanges()
     expect(testingHelper.getByTestId('pjt-link-repo')).toBeFalsy()
     expect(testingHelper.getByTestId('pjt-link-deploy')).toBeFalsy()
   })
@@ -53,5 +51,7 @@ describe('ProjectCardComponent', () => {
       img: '',
     }
     fixture.detectChanges()
+    expect(testingHelper.getByTestId('pjt-link-repo')).toBeTruthy()
+    expect(testingHelper.getByTestId('pjt-link-deploy')).toBeTruthy()
   })
 })
