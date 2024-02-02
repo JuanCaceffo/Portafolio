@@ -13,12 +13,12 @@ export class TestingHelper<T> {
     return testingHelper
   }
 
-  getByTestId(testId: string) {
+  getByTestId(testId: string): Node {
     const resultHtml = this.fixture.debugElement.nativeElement
     return resultHtml.querySelector(`[data-testid="${testId}"]`)
   }
 
-  getAllByTestId(testId: string) {
+  getAllByTestId(testId: string): NodeList {
     const resultHtml = this.fixture.debugElement.nativeElement
     return resultHtml.querySelectorAll(`[data-testid="${testId}"]`)
   }
