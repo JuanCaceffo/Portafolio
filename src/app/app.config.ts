@@ -7,7 +7,8 @@ import { provideTransloco } from '@ngneat/transloco'
 
 export type langAvilableTypes = 'en'|'es' 
 const langs = ['en', 'es']
-export const providers = [
+
+const providers = [
   provideRouter(routes),
   provideHttpClient(),
   provideTransloco({
