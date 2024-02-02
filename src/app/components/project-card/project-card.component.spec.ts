@@ -38,8 +38,7 @@ describe('ProjectCardComponent', () => {
 
   it('When the project card contains repo and deploy data, these elements will be shown in the window.', () => {
     component.cardData = {
-      pjtType: { es: '', en: '' },
-      title: { es: '', en: '' },
+      ...emptyPrjtCardData,
       content: {
         description: {
           es: '',
@@ -48,7 +47,6 @@ describe('ProjectCardComponent', () => {
         deploy: 'contenido',
         repo: 'contenido',
       },
-      img: '',
     }
     fixture.detectChanges()
     expect(testingHelper.getByTestId('pjt-link-repo')).toBeTruthy()
