@@ -9,6 +9,9 @@
   left: 0;
   background-color: var(--color-violet-secondary);
   z-index: 99;
+  .header__logo{
+    font-family: var(--typeface-logo);
+  }
   //TODO: cambiar el estilo por que queda medio fiero
   .router-link-active{
     transform: scale(1.2);
