@@ -52,4 +52,26 @@ describe('ProjectCardComponent', () => {
     expect(testingHelper.getByTestId('pjt-link-repo')).toBeTruthy()
     expect(testingHelper.getByTestId('pjt-link-deploy')).toBeTruthy()
   })
+  it('When the project card just only contains a deploy data then only show deploy button', () => {
+    component.cardData = {
+      ...emptyPrjtCardData,
+      content: {
+        description: {
+          es: '',
+          en: '',
+        },
+        deploy: 'contenido',
+      },
+    }
+    fixture.detectChanges()
+    expect(testingHelper.getByTestId('pjt-link-repo')).toBeFalsy()
+    expect(testingHelper.getByTestId('pjt-link-deploy')).toBeTruthy()
+  })
+  it('When the project card is reversed some elements contains a new class',() => {
+    component.reverse = true
+    fixture.detectChanges()
+    testingHelper.getAllByTestId('reverse').forEach((node: any) => {
+      expect(node).toHaveClass('reverse')
+    })
+  })
 })
