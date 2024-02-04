@@ -1,8 +1,8 @@
-<section class="skill" *transloco="let t; read: 'about'">
+<section class="flex skill" *transloco="let t; read: 'about'">
     <h1 class="title4">{{t('skill')}}</h1>
-  <article class="skill__bublle-cnt">
+  <article class="flex skill__bublle-cnt">
     @for (skillList of skillLists; track $index) {
-      <section>
+      <section class="flex skill__list">
         @for (item of skillList; track item.imgUrl) {
           <img class="skill__bubble" [src]="item.imgUrl" />
         }

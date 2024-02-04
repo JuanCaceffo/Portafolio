@@ -1,10 +1,21 @@
-.skill__bubble {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.5em;
-  height: 4.5em;
-  padding: 0.5em;
-  border-radius: 50%;
-  background-color: #251c31;
+.skill{
+  width: 100%;
+  gap: 2em;
+  .skill__bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5em;
+    height: 4.5em;
+    padding: 0.5em;
+    border-radius: 50%;
+    background-color: #251c31;
+  }
+  .skill__bublle-cnt{
+    gap: 1em;
+    .skill__list{
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
 }
