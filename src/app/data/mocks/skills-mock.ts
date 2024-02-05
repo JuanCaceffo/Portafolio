@@ -10,4 +10,5 @@ export const skillsList: SkilllsDTO[] = [
   { imgUrl: '/assets/mocks-imgs/skills/sass.png' },
   { imgUrl: '/assets/mocks-imgs/skills/html.png' },
   { imgUrl: '/assets/mocks-imgs/skills/git.png' },
+  { imgUrl: '/assets/mocks-imgs/skills/kotlin.png' },
 ]

@@ -4,7 +4,9 @@
     @for (skillList of skillLists; track $index) {
       <section class="flex skill__list">
         @for (item of skillList; track item.imgUrl) {
-          <img class="skill__bubble" [src]="item.imgUrl" />
+          <figure class="skill__bubble">
+            <img class="skill__bubble-img" [src]="item.imgUrl" /> 
+          </figure>
         }
       </section>
     }
