@@ -17,21 +17,9 @@ export class SkillsComponent implements OnInit {
   constructor(private skillsService: SkillsService) {}
 
   ngOnInit() {
-    this.sliceSkillList()
-  }
-  skillLists: Array<SkilllsDTO[]> = []
-
-  sliceSkillList() {
-    const firstColumnSize = 4
-    var num = 0
-    this.skillsService.getAll().then((value) => {
-      const copyValue = Array.from(value)
-      while ((copyValue.length - (firstColumnSize + num)) > 0) {
-        this.skillLists.push(copyValue.splice(0, firstColumnSize + num))
-        num++
-      }
-      this.skillLists.push(copyValue)
+    this.skillsService.getAll().then(value => {
+      this.skillList = value
     })
-    console.log(skillsList)
   }
+  skillList: SkilllsDTO[] = []
 }

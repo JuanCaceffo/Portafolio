@@ -1,14 +1,12 @@
 <section class="flex skill" *transloco="let t; read: 'about'">
     <h1 class="title4">{{t('skill')}}</h1>
   <article class="flex skill__bublle-cnt">
-    @for (skillList of skillLists; track $index) {
-      <section class="flex skill__list">
-        @for (item of skillList; track item.imgUrl) {
-          <figure class="skill__bubble">
-            <img class="skill__bubble-img" [src]="item.imgUrl" /> 
-          </figure>
-        }
-      </section>
-    }
+    <section class="flex skill__list">
+      @for (item of skillList; track item.imgUrl) {
+        <figure class="skill__bubble">
+          <img class="skill__bubble-img" [src]="item.imgUrl" /> 
+        </figure>
+      }
+    </section>
   </article>
 </section>
