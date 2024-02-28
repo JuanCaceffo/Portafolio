@@ -1,16 +1,16 @@
 import { ApplicationConfig, isDevMode } from '@angular/core'
 import { provideRouter } from '@angular/router'
 import { routes } from './app.routes'
-import { provideHttpClient } from '@angular/common/http'
+import {  HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@angular/common/http'
 import { TranslocoHttpLoader } from './data/services/transloco-loader'
 import { provideTransloco } from '@ngneat/transloco'
+import { LangHttpInerceptorService } from './data/services/lang-http-inerceptor.service'
 
 export type langAvilableTypes = 'en'|'es' 
 const langs = ['en', 'es']
 
 export const providers = [
   provideRouter(routes),
-  provideHttpClient(),
   provideTransloco({
     config: {
       availableLangs: langs,
@@ -21,6 +21,14 @@ export const providers = [
     },
     loader: TranslocoHttpLoader,
   }),
+  provideHttpClient(
+    withInterceptorsFromDi()
+  ),
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LangHttpInerceptorService,
+    multiple: true,
+},
 ]
 
 export const appConfig: ApplicationConfig = {

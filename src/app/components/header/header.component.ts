@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common'
 import {
   TranslocoDirective,
   TranslocoService,
-  translate,
 } from '@ngneat/transloco'
 import { langAvilableTypes } from '../../app.config'
 
