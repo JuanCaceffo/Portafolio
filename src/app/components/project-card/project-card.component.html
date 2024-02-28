@@ -1,16 +1,16 @@
 <article class="pjt-card" [ngClass]="classReverse()" data-testid="reverse" *transloco="let t; read: 'project-card'">
   <section class="pjt-card__content" [ngClass]="classReverse()" data-testid="reverse">
     <header class="pjt-card__header">
-      <h6 class="pjt-card__type subtitle2" [ngClass]="classReverse()" data-testid="reverse">{{ t('pjtTitle-'+this.identifier) }}</h6>
-      <h1 class="pjt-card__title title2">{{ t('title-'+this.identifier) }}</h1>
+      <h6 class="pjt-card__type subtitle2" [ngClass]="classReverse()" data-testid="reverse">{{ this.cardData.type }}</h6>
+      <h1 class="pjt-card__title title2">{{ this.cardData.title }}</h1>
     </header>
     <section class="pjt-card__description" [ngClass]="classReverse()" data-testid="reverse">
       <span class="body2">
-        {{ t('description-'+this.identifier) }}
+        {{ this.cardData.description }}
       </span>
       @for (item of linksInfo; track item.key) { 
-        @if (!!cardData.content[item.key]) {
-          <a [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData.content[item.key]" target="_blank">
+        @if (!!cardData[item.key]) {
+          <a [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData[item.key]" target="_blank">
             <i class="pjt-card__desc-links {{item.class}}">{{ t(item.key) }}</i>
           </a>
         } 
@@ -20,7 +20,7 @@
   <section  class="pjt-card__ilstration" [ngClass]="classReverse()" data-testid="reverse">
     <figure class="pjt-card__container">
       <figure class="pjt-card__img-container">
-        <img class="pjt-card__img" [ngClass]="classReverse()" data-testid="reverse" [src]="cardData.img" />
+        <img class="pjt-card__img" [ngClass]="classReverse()" data-testid="reverse" [src]="cardData.imgs[0]" />
       </figure>
       <img
         src="/assets/gradients/Gradient.png"

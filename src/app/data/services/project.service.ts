@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { CardProjectDTO } from '../interfaces/CardProjectDTO';
-import { projectCardData } from '../mocks/card-project-mock';
+import {HttpClient} from '@angular/common/http'
+import { pathApi, paths } from './config';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
-constructor() { }
+constructor(private httpClient: HttpClient) { }
 
-  getAll(): Promise<CardProjectDTO[]> {
-    return new Promise((resolve) => {
-      resolve(projectCardData)
-    })
+  async getAll(): Promise<CardProjectDTO[]> {
+    const response$ = this.httpClient.get<CardProjectDTO[]>(`${pathApi}/${paths.project}/all`)
+    return await lastValueFrom(response$)
   }
 }

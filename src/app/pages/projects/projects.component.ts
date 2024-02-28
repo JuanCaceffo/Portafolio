@@ -17,6 +17,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.projectService.getAll().then((value) => {
+      console.log(value)
       this.projectCards = value
     })
   }

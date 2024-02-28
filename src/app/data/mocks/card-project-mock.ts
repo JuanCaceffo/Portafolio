@@ -1,22 +1,17 @@
 import { CardProjectDTO } from "../interfaces/CardProjectDTO";
 
 export const emptyPrjtCardData: CardProjectDTO = {
-  pjtType: { es: '', en: '' },
-  title: { es: '', en: '' },
-  content: {
-    description: {
-      es: '',
-      en: '',
-    },
-    deploy: '',
-    repo: '',
-  },
-  img: '',
+  type: '',
+  title: '',
+  description: '',
+  deploy: '',
+  repo: '',
+  imgs: [''],
 }
 
-export const projectCardData: CardProjectDTO[] = [
+/* export const projectCardData: CardProjectDTO[] = [
   {
-    pjtType: { es: 'Aplicacion web', en: 'Web App' },
+    type: { es: 'Aplicacion web', en: 'Web App' },
     title: { es: 'WorldCapp 2023', en: 'WorldCapp 2023' },
     content: {
       description: {
@@ -29,7 +24,7 @@ export const projectCardData: CardProjectDTO[] = [
     img: '/assets/mocks-imgs/pjt/wordlCapp.jpeg',
   },
   {
-    pjtType: { es: 'Aplicacion web', en: 'Web App' },
+    type: { es: 'Aplicacion web', en: 'Web App' },
     title: { es: 'WorldCapp admin 2023', en: 'WorldCapp admin  2023' },
     content: {
       description: {
@@ -42,3 +37,4 @@ export const projectCardData: CardProjectDTO[] = [
     img: '/assets/mocks-imgs/pjt/worldCappAdmin.png',
   },
 ] 
+ */
