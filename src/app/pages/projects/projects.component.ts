@@ -1,3 +1,4 @@
+import { SharedDataService } from './../../data/services/shared-data.service';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
@@ -13,12 +14,17 @@ import { CardProjectDTO } from '../../data/interfaces/CardProjectDTO';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private dataService: SharedDataService, private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.dataService.setData(this.fetchProjectData)
+    this.fetchProjectData()
+  }
+  projectCards: CardProjectDTO[] = []
+
+  fetchProjectData = () => {
     this.projectService.getAll().then((value) => {
       this.projectCards = value
     })
   }
-  projectCards: CardProjectDTO[] = []
 }

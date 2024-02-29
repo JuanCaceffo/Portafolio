@@ -1,3 +1,4 @@
+import { SharedDataService } from './../../data/services/shared-data.service';
 import { Component, DestroyRef, OnInit, inject } from '@angular/core'
 import { RouterLink, RouterLinkActive } from '@angular/router'
 import { BurgerButtonComponent } from '../burger-button/burger-button.component'
@@ -22,9 +23,13 @@ import { langAvilableTypes } from '../../app.config'
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private translocoService: TranslocoService) {}
+  constructor(private dataService: SharedDataService, private translocoService: TranslocoService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dataService.currentData.subscribe(data => {
+      this.dataToFetch = data
+    })
+  }
 
   isActive = false
   langInfo:{src:string, lang:langAvilableTypes }[] = [
@@ -49,12 +54,14 @@ export class HeaderComponent implements OnInit {
       link: 'contact',
     },
   ]
+  dataToFetch? : () => void
 
   onClicked = () => {
     this.isActive = !this.isActive
   }
   changeLanguague = (lang: langAvilableTypes) => {
     this.translocoService.setActiveLang(lang)
+    this.dataToFetch && this.dataToFetch()
     this.onClicked()
   }
 }
