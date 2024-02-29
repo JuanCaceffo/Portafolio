@@ -27,8 +27,8 @@ export const providers = [
   {
     provide: HTTP_INTERCEPTORS,
     useClass: LangHttpInerceptorService,
-    multiple: true,
-},
+    multi: true,
+  },
 ]
 
 export const appConfig: ApplicationConfig = {
