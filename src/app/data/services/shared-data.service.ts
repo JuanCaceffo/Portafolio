@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedDataService {
-  private data = new BehaviorSubject((() => {}))
+  private data = new BehaviorSubject(() => {})
   currentData = this.data.asObservable()
 
   setData(data: () => void){
