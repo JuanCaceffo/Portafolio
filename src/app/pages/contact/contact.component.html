@@ -1,15 +1,15 @@
-<main class="contact flex">  
+<main class="contact flex" *transloco="let t; read: 'contact'">  
   <header class="contact__header flex">
-    <h1 class="contact__title title3">CONTACTO</h1>
-    <span class="body1">(todos los campos son obligatorios)</span>
+    <h1 class="contact__title title3">{{t('title')}}</h1>
+    <span class="subtitle2">({{t('sub-title')}})</span>
   </header>
   <form class="contact__form contact__container">
      @for (inputProp of inputPros; track inputProp.pleaceholderKey) {
-       <input class="field field__input contact__inputs title6" [type]="inputProp.type" [placeholder]="inputProp.pleaceholderKey">
+       <input class="field field__input contact__inputs body1" [type]="inputProp.type" [placeholder]="t(inputProp.pleaceholderKey)">
      }
-     <textarea class="field field__input contact__inputs title6" placeholder="mensaje" cols="30" rows="10"></textarea>
+     <textarea class="field field__input contact__inputs body1" [placeholder]="t('message')" cols="30" rows="10"></textarea>
     </form>
     <section class="contact__btn-container contact__container flex">
-      <button class="contact__button title6">enviar mensaje</button>
+      <button class="contact__button body1">{{t('button')}}</button>
     </section>
 </main>

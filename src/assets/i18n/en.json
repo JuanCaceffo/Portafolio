@@ -15,5 +15,13 @@
   "project-card": {
     "repo": "Repository",
     "deploy": "Deploy"
+  },
+  "contact": {
+    "title": "Contact",
+    "sub-title": "All of the fields are needed",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "button": "Send message"
   }
 }

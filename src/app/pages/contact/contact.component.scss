@@ -24,6 +24,9 @@
 
     .contact__inputs{
       padding: 1em 0;
+      &:hover{
+        color: var(--text-color);
+      }
     }
   }
   .contact__btn-container{
@@ -33,7 +36,7 @@
     width: 100%;
     padding: 0.8em;
     border-radius: 1em; 
-    color: black;
+    color: var(--text-color);
     background-color: var(--color-violet-fifth);
   }
 }

@@ -15,5 +15,13 @@
   "project-card": {
     "repo": "Repositorio",
     "deploy": "Despliegue"
+  },
+  "contact": {
+    "title": "Contacto",
+    "sub-title": "Todos los campos son obligatorios",
+    "name": "Nombre",
+    "email": "Correo electronico",
+    "message": "Mensaje",
+    "button": "Enviar mensaje"
   }
 }
