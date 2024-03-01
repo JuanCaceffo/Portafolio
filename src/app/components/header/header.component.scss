@@ -26,6 +26,9 @@
     gap: 4em;
     z-index: 99;
     align-items: center;
+    .header__nav-link{
+      font-weight: 600;
+    }
   }
   .header__langs{
     display: flex;

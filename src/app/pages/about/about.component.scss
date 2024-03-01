@@ -96,14 +96,16 @@
 
 @media (width >= 700px) {
   .about{
-    font-size: 1.2rem;
     gap: 3rem;
   }
   .about__header{
-    width: 70rem;
+    min-width: 70rem;
+    width: 70%;
   }
   .about__content{
-    width: 63rem;
+    min-width: 63rem;
+    width: 63%;
+  
   }
   .about__footer{
     align-items: center;
