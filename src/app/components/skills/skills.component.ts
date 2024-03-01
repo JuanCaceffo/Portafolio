@@ -1,4 +1,4 @@
-import { SkillsService } from './../../data/services/skills.service'
+import { PersonalInfoService } from '../../data/services/PersonalInfo.service'
 import { CommonModule } from '@angular/common'
 import { Component, OnInit } from '@angular/core'
 import { TranslocoDirective } from '@ngneat/transloco'
@@ -14,7 +14,7 @@ import { from } from 'rxjs'
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
-  constructor(private skillsService: SkillsService) {}
+  constructor(private skillsService: PersonalInfoService) {}
 
   ngOnInit() {
     this.skillsService.getAll().then(value => {
