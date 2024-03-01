@@ -1,3 +1,15 @@
-<p>
-  contact works!
-</p>
+<main class="contact flex">  
+  <header class="contact__header flex">
+    <h1 class="contact__title title3">CONTACTO</h1>
+    <span class="body1">(todos los campos son obligatorios)</span>
+  </header>
+  <form class="contact__form contact__container">
+     @for (inputProp of inputPros; track inputProp.pleaceholderKey) {
+       <input class="field field__input contact__inputs title6" [type]="inputProp.type" [placeholder]="inputProp.pleaceholderKey">
+     }
+     <textarea class="field field__input contact__inputs title6" placeholder="mensaje" cols="30" rows="10"></textarea>
+    </form>
+    <section class="contact__btn-container contact__container flex">
+      <button class="contact__button title6">enviar mensaje</button>
+    </section>
+</main>

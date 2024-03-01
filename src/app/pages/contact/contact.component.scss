@@ -1,0 +1,39 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.contact{
+  gap: 3em;
+  height: 50%;
+  width: 100%;
+  .contact__header{
+    gap: 0.5em;
+    .contact__title{
+      color: var(--color-violet-fifth);
+    }
+  }
+  .contact__container{
+    width: 100%;
+    padding: 0 10%;
+  }
+  .contact__form{
+    display: grid;
+    gap: 2em;
+
+    .contact__inputs{
+      padding: 1em 0;
+    }
+  }
+  .contact__btn-container{
+    margin-top: 1em;
+  }
+  .contact__button{
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 1em; 
+    color: black;
+    background-color: var(--color-violet-fifth);
+  }
+}
