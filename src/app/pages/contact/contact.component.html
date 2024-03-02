@@ -7,7 +7,7 @@
      @for (inputProp of inputPros; track inputProp.pleaceholderKey) {
        <input class="field field__input contact__inputs title6" [type]="inputProp.type" [placeholder]="t(inputProp.pleaceholderKey)">
      }
-     <textarea class="field field__input contact__inputs title6" [placeholder]="t('message')" cols="30" rows="10"></textarea>
+     <textarea class="field field__input contact__inputs contact__textarea title6" [placeholder]="t('message')" cols="30" rows="10"></textarea>
     </form>
     <section class="contact__btn-container contact__container flex">
       <button class="contact__button title6">{{t('button')}}</button>

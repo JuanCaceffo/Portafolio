@@ -8,6 +8,7 @@
   gap: 3em;
   height: 50%;
   width: 100%;
+  max-width: 100rem;
   .contact__header{
     gap: 1em;
     .contact__title{
@@ -38,5 +39,23 @@
     border-radius: 1em; 
     color: var(--text-color);
     background-color: var(--color-violet-fifth);
+  }
+}
+
+@media (width >= 700px) {
+  .contact{
+    .contact__form{
+      grid-template-columns: repeat(2,1fr);
+      .contact__textarea{
+        grid-column: -3/-1;
+      }
+    }
+    .contact__btn-container{
+      align-items: flex-end;
+      margin-top: 0;
+    }
+    .contact__button{
+      width: fit-content;
+    }   
   }
 }
