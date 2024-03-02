@@ -4,12 +4,12 @@
     <span class="title6">({{t('sub-title')}})</span>
   </header>
   <form class="contact__form contact__container">
-     @for (inputProp of inputPros; track inputProp.pleaceholderKey) {
-       <input class="field field__input contact__inputs title6" [type]="inputProp.type" [placeholder]="t(inputProp.pleaceholderKey)">
+     @for (inputProp of inputPros; track inputProp.key) {
+       <input [name]="inputProp.key" [(ngModel)]="data[inputProp.key]" class="field field__input contact__inputs title6" [type]="inputProp.type" [placeholder]="t(inputProp.key)">
      }
-     <textarea class="field field__input contact__inputs contact__textarea title6" [placeholder]="t('message')" cols="30" rows="10"></textarea>
+     <textarea [(ngModel)]="data.message" name="message" class="field field__input contact__inputs contact__textarea title6"  [placeholder]="t('message')" cols="30" rows="10"></textarea>
     </form>
     <section class="contact__btn-container contact__container flex">
-      <button class="contact__button title6">{{t('button')}}</button>
+      <button (click)="caca()" class="contact__button title6">{{t('button')}}</button>
     </section>
 </main>
