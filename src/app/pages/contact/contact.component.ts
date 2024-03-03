@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslocoDirective } from '@ngneat/transloco';
 import { ContactDTO } from '../../data/interfaces/ContactDTO';
+import { PersonalInfoService } from '../../data/services/PersonalInfo.service';
 
 
 @Component({
@@ -12,14 +13,11 @@ import { ContactDTO } from '../../data/interfaces/ContactDTO';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  data: ContactDTO = {} as ContactDTO
+  constructor(private infoService: PersonalInfoService) { }
+  emptyContactData = {name: '', email:'',message:''}
+  data: ContactDTO = Object.assign({}, this.emptyContactData)
 
   inputPros = [
     {
@@ -32,8 +30,10 @@ export class ContactComponent implements OnInit {
     }
   ]
 
-  caca(){
-    console.log(this.data)
-  }
+  isNotComplete = () => (Object.values(this.data).some(value => !value))
 
+  sendMessage(){
+    this.infoService.contact(this.data)
+    this.data = Object.assign({}, this.emptyContactData)
+  }
 }

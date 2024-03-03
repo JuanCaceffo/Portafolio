@@ -37,8 +37,12 @@
     width: 100%;
     padding: 0.8em;
     border-radius: 1em; 
-    color: var(--text-color);
+    cursor: pointer;
+    color: var(--text-color-2lighter);
     background-color: var(--color-violet-fifth);
+    &.contact__button--uncompleted{
+      background-color: gray;
+    }
   }
 }
 

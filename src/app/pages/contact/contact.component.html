@@ -10,6 +10,6 @@
      <textarea [(ngModel)]="data.message" name="message" class="field field__input contact__inputs contact__textarea title6"  [placeholder]="t('message')" cols="30" rows="10"></textarea>
     </form>
     <section class="contact__btn-container contact__container flex">
-      <button (click)="caca()" class="contact__button title6">{{t('button')}}</button>
+      <button [disabled]="isNotComplete()" (click)="sendMessage()" [ngClass]="isNotComplete() ? 'contact__button--uncompleted' : ''" class="contact__button title6">{{t('button')}}</button>
     </section>
 </main>
