@@ -21,6 +21,9 @@
       padding: 2em;
       border-radius: 1em;
     }
+    .pjt-card_links {
+      gap: 1em;
+    }
     .pjt-card__desc-links {
       display: flex;
       align-items: center;
@@ -77,7 +80,7 @@
     width: 100%;
     min-width: 50rem;
     height: 23rem;
-    &.reverse{
+    &.reverse {
       flex-direction: row-reverse;
     }
 
@@ -85,22 +88,33 @@
       width: 50%;
       min-width: 25rem;
       gap: 3em;
-      &.reverse{
+      &.reverse {
         align-items: flex-end;
       }
-      .pjt-card__type.reverse{
+      .pjt-card__type.reverse {
         text-align: end;
       }
       .pjt-card__description {
         $gradient-color-1: rgba(32, 11, 46, 0.7679446778711485);
         $gradient-color-2: rgba(113, 39, 186, 0.6474964985994398);
-      
+
         background: rgb(32, 11, 46);
-        background: linear-gradient(90deg, $gradient-color-1 73%, $gradient-color-2 90%);
-      
+        background: linear-gradient(
+          90deg,
+          $gradient-color-1 73%,
+          $gradient-color-2 90%
+        );
+
         &.reverse {
-          background: linear-gradient(270deg, $gradient-color-1 73%, $gradient-color-2 90%);
+          background: linear-gradient(
+            270deg,
+            $gradient-color-1 73%,
+            $gradient-color-2 90%
+          );
         }
+      }
+      .pjt-card_links {
+        flex-direction: row;
       }
     }
     .pjt-card__ilstration {
@@ -109,7 +123,7 @@
       height: 100%;
       margin-top: 3em;
       margin-left: -12em;
-      &.reverse{
+      &.reverse {
         margin-left: unset;
         margin-right: -12em;
       }
@@ -123,7 +137,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            &.reverse{
+            &.reverse {
               left: 0;
               right: unset;
             }

@@ -8,13 +8,15 @@
       <span class="title6">
         {{ this.cardData.description }}
       </span>
-      @for (item of linksInfo; track item.key) { 
-        @if (!!cardData[item.key]) {
-          <a  [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData[item.key]" target="_blank">
-            <i class="pjt-card__desc-links {{item.class}}">{{ t(item.key) }}</i>
-          </a>
-        } 
-      }
+      <div class="flex pjt-card_links">
+        @for (item of linksInfo; track item.key) { 
+          @if (!!cardData[item.key]) {
+            <a  [attr.data-testid]="'pjt-link-'+item.key" [href]="cardData[item.key]" target="_blank">
+              <i class="pjt-card__desc-links {{item.class}}">{{ t(item.key) }}</i>
+            </a>
+          } 
+        }
+      </div>
     </section>
   </section>
   <section  class="pjt-card__ilstration" [ngClass]="classReverse()" data-testid="reverse">
