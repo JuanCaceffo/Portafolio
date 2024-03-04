@@ -1,10 +1,12 @@
-import { ApplicationConfig, isDevMode } from '@angular/core'
+import { ApplicationConfig, importProvidersFrom, isDevMode } from '@angular/core'
 import { provideRouter } from '@angular/router'
 import { routes } from './app.routes'
 import {  HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@angular/common/http'
 import { TranslocoHttpLoader } from './data/services/transloco-loader'
 import { provideTransloco } from '@ngneat/transloco'
 import { LangHttpInerceptorService } from './data/services/lang-http-inerceptor.service'
+import { provideAnimations } from '@angular/platform-browser/animations';
+
 
 export type langAvilableTypes = 'en'|'es' 
 const langs = ['en', 'es']
@@ -29,6 +31,7 @@ export const providers = [
     useClass: LangHttpInerceptorService,
     multi: true,
   },
+  provideAnimations()
 ]
 
 export const appConfig: ApplicationConfig = {
