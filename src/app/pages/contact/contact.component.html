@@ -1,15 +1,23 @@
-<main class="contact flex" *transloco="let t; read: 'contact'">  
-  <header class="contact__header flex">
-    <h1 class="contact__title title1">{{t('title')}}</h1>
-    <span class="title6">({{t('sub-title')}})</span>
-  </header>
-  <form class="contact__form contact__container">
-     @for (inputProp of inputPros; track inputProp.key) {
-       <input [name]="inputProp.key" [(ngModel)]="data[inputProp.key]" class="field field__input contact__inputs title6" [type]="inputProp.type" [placeholder]="t(inputProp.key)">
-     }
-     <textarea [(ngModel)]="data.message" name="message" class="field field__input contact__inputs contact__textarea title6"  [placeholder]="t('message')" cols="30" rows="10"></textarea>
-    </form>
-    <section class="contact__btn-container contact__container flex">
-      <button [disabled]="isNotComplete()" (click)="sendMessage()" [ngClass]="isNotComplete() ? 'contact__button--uncompleted' : ''" class="contact__button title6">{{t('button')}}</button>
-    </section>
+<main  class="contact__container" *transloco="let t; read: 'contact'">  
+  <section class="contact flex">
+    <header class="contact__header flex">
+      <h1 class="contact__title title1">{{t('title')}}</h1>
+      <span class="title6">({{t('sub-title')}})</span>
+    </header>
+    <form class="contact__form contact__form-container">
+      @for (inputProp of inputPros; track inputProp.key) {
+        <mat-form-field class="contact__inputs">
+          <mat-label>{{t(inputProp.key)}}</mat-label>
+          <input matInput [name]="inputProp.key" [(ngModel)]="data[inputProp.key]" [type]="inputProp.type">
+        </mat-form-field>
+      }
+      <mat-form-field class="contact__inputs contact__textarea title6">
+        <mat-label>{{t('message')}}</mat-label>
+        <textarea matInput [(ngModel)]="data.message" name="message" cols="30" rows="8"></textarea>
+      </mat-form-field>
+      </form>
+      <section class="contact__btn-container contact__form-container flex">
+        <button [disabled]="isNotComplete()" (click)="sendMessage()" [ngClass]="isNotComplete() ? 'contact__button--uncompleted' : ''" class="contact__button title6">{{t('button')}}</button>
+      </section>
+  </section>
 </main>
