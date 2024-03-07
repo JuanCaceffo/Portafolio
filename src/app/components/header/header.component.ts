@@ -45,10 +45,11 @@ export class HeaderComponent implements OnInit {
       langKey: 'project',
       link: 'projects',
     },
-    {
+    //TODO: add in a future
+    /* {
       langKey: 'experience',
       link: 'experience',
-    },
+    } */
     {
       langKey: 'contact',
       link: 'contact',
