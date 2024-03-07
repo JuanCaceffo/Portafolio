@@ -8,16 +8,21 @@
       @for (inputProp of inputPros; track inputProp.key) {
         <mat-form-field class="contact__inputs">
           <mat-label>{{t(inputProp.key)}}</mat-label>
-          <input matInput [name]="inputProp.key" [(ngModel)]="data[inputProp.key]" [type]="inputProp.type">
+          <input [disabled]="loading" matInput [name]="inputProp.key" [(ngModel)]="data[inputProp.key]" [type]="inputProp.type">
         </mat-form-field>
       }
       <mat-form-field class="contact__inputs contact__textarea title6">
         <mat-label>{{t('message')}}</mat-label>
-        <textarea matInput [(ngModel)]="data.message" name="message" cols="30" rows="8"></textarea>
+        <textarea [disabled]="loading" matInput [(ngModel)]="data.message" name="message" cols="30" rows="8"></textarea>
       </mat-form-field>
       </form>
       <section class="contact__btn-container contact__form-container flex">
-        <button [disabled]="isNotComplete()" (click)="sendMessage()" [ngClass]="isNotComplete() ? 'contact__button--uncompleted' : ''" class="contact__button title6">{{t('button')}}</button>
+        <button [disabled]="isNotComplete()" (click)="sendMessage()" [ngClass]="isNotComplete() ? 'contact__button--uncompleted' : ''" class="contact__button title6">
+          <span>
+            {{t('button') }}
+          </span>
+          @if (loading) {<mat-spinner class="spinner" diameter="20"></mat-spinner>}
+        </button>
       </section>
   </section>
 </main>
