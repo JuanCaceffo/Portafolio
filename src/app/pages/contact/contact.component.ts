@@ -52,12 +52,12 @@ export class ContactComponent implements OnDestroy{
   isNotComplete = () => Object.values(this.data).some((value) => !value)
 
   sendMessage() {
-    this.infoService.contact(this.data).then((_value) => {
-      this.snackBar.openSuccesSnack({message: this.translocoService.translate('contact.email-succes'), action: '', config: {  verticalPosition:'top'}})
+    /* this.infoService.contact(this.data).then((_value) => {
+      this.snackBar.openSuccesSnack({message: this.translocoService.translate('contact.email-succes'), action: ''})
     }
-    ).catch((_err) => {
-      this.snackRef= this.snackBar.openErrorSnack({message: this.translocoService.translate('contact.email-error'), action: '', config: {  verticalPosition:'top'}})
-    })
+    ).catch((_err) => { */
+      this.snackRef= this.snackBar.openErrorSnack({message: this.translocoService.translate('contact.email-error'), action: ''})
+    /* }) */
     this.data = Object.assign({}, this.emptyContactData)
   }
 }

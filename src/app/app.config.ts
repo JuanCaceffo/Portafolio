@@ -6,6 +6,7 @@ import { TranslocoHttpLoader } from './data/services/transloco-loader'
 import { provideTransloco } from '@ngneat/transloco'
 import { LangHttpInerceptorService } from './data/services/lang-http-inerceptor.service'
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar'
 
 
 export type langAvilableTypes = 'en'|'es' 
@@ -31,7 +32,8 @@ export const providers = [
     useClass: LangHttpInerceptorService,
     multi: true,
   },
-  provideAnimations()
+  provideAnimations(),
+  {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 3500, verticalPosition:'top'}}
 ]
 
 export const appConfig: ApplicationConfig = {
