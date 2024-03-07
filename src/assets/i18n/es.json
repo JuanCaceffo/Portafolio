@@ -22,6 +22,8 @@
     "name": "Nombre",
     "email": "Correo electronico",
     "message": "Mensaje",
-    "button": "Enviar mensaje"
+    "button": "Enviar mensaje",
+    "email-succes": "Email enviado con exito",
+    "email-error": "Problemas al enviar el correo electrónico, intente más tarde."
   }
 }
