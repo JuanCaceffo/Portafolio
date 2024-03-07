@@ -1,0 +1,17 @@
+.mdc-snackbar{
+  margin-top: 6.1rem !important
+}
+.snackbar-succes{
+  &.mdc-snackbar{
+    .mdc-snackbar__surface{
+      background-color: var(--color-succes);  
+    }
+  }
+}
+.snackbar-error{
+  &.mdc-snackbar{
+    .mdc-snackbar__surface{
+      background-color: var(--color-error);  
+    }
+  }
+}

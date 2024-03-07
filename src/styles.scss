@@ -49,6 +49,9 @@ $portafolio-theme: mat.define-light-theme((
   --color-clear-medium: hsla(0, 0%, 96%, 1);
   --color-clear-dark: hsla(0, 0%, 94%, 1);
   --color-clear-2dark: hsla(0, 0%, 84%, 1);
+  /* ------------- Color Information ------------- */
+  --color-succes: #5CB85C;
+  --color-error: #ff3333; 
   /* ------------- Text & Typeface ------------- */
   --text-color-2lighter: hsla(207, 20%, 75%, 1);
   --text-color: hsla(207, 30%, 10%, 1);
@@ -127,5 +130,6 @@ a:link, :visited, :hover, :active{
   align-items: center;
 }
 
+@import url('./app/styles/snackbar.scss');
 @import url('./app/styles/typography.scss');
 @import url('./app/styles/layout.scss');
