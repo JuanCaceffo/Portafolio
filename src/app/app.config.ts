@@ -7,6 +7,7 @@ import { provideTransloco } from '@ngneat/transloco'
 import { LangHttpInerceptorService } from './data/services/lang-http-inerceptor.service'
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar'
+import { TimeoutHttpInterceptorService } from './data/services/timeout-http-interceptor.service'
 
 
 export type langAvilableTypes = 'en'|'es' 
@@ -30,6 +31,11 @@ export const providers = [
   {
     provide: HTTP_INTERCEPTORS,
     useClass: LangHttpInerceptorService,
+    multi: true,
+  },
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TimeoutHttpInterceptorService,
     multi: true,
   },
   provideAnimations(),
