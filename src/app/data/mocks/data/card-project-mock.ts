@@ -1,4 +1,4 @@
-import { CardProjectDTO } from "../interfaces/CardProjectDTO";
+import { CardProjectDTO } from "../../interfaces/CardProjectDTO";
 
 export const emptyPrjtCardData: CardProjectDTO = {
   type: '',

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common'
 import { Component, OnInit } from '@angular/core'
 import { TranslocoDirective } from '@ngneat/transloco'
 import { SkilllsDTO } from '../../data/interfaces/SkillsDTO'
-import { skillsList } from '../../data/mocks/skills-mock'
+import { skillsList } from '../../data/mocks/data/skills-mock'
 import { from } from 'rxjs'
 
 @Component({
@@ -17,7 +17,7 @@ export class SkillsComponent implements OnInit {
   constructor(private skillsService: PersonalInfoService) {}
 
   ngOnInit() {
-    this.skillsService.getAll().then(value => {
+    this.skillsService.getSkills().then(value => {
       this.skillList = value
     })
   }
