@@ -1,0 +1,29 @@
+{
+  "header": {
+    "about": "Sobre mi",
+    "project": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "about": {
+    "greeting": " Hola! Soy ",
+    "postion": " Soy Desarrollador de software Full stack. ",
+    "desc-title": " Un poco sobre mi... ",
+    "description": " Soy una persona comprometida con un continuo proceso de desarrollo, caracterizado por mi responsabilidad, organización y proactividad. Mi inquebrantable pasión por el aprendizaje, junto con mi destreza para la comunicación efectiva y la resolución de problemas, me impulsa hacia una constante evolución y crecimiento. Estoy en búsqueda activa de oportunidades que me desafíen y me permitan contribuir con mi capacidad de adaptación y creatividad, siempre orientado hacia el logro de objetivos y la excelencia. ",
+    "skill": "Habilidades tecnincas"
+  },
+  "project-card": {
+    "repo": "Repositorio",
+    "deploy": "Despliegue"
+  },
+  "contact": {
+    "title": "Contacto",
+    "sub-title": "Todos los campos son obligatorios",
+    "name": "Nombre",
+    "email": "Correo electronico",
+    "message": "Mensaje",
+    "button": "Enviar mensaje",
+    "email-succes": "Email enviado con exito",
+    "email-error": "Problemas al enviar el correo electrónico, intente más tarde."
+  }
+}

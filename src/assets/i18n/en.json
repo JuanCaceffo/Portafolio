@@ -1,0 +1,29 @@
+{
+  "header":{
+    "about": "About me",
+    "project": "projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "about": {
+    "greeting": " Hello! I am ",
+    "postion": " I am a Full Stack Software Developer. ",
+    "desc-title": " A little about me... ",
+    "description": " I am an individual committed to a continuous development process, characterized by my responsibility, organization, and proactivity. My unwavering passion for learning, along with my skill in effective communication and problem-solving, drives me towards constant evolution and growth. I am actively seeking opportunities that challenge me and allow me to contribute with my adaptability and creativity, always oriented towards achieving goals and excellence. ",
+    "skill": "Technical skills"
+  },
+  "project-card": {
+    "repo": "Repository",
+    "deploy": "Deploy"
+  },
+  "contact": {
+    "title": "Contact",
+    "sub-title": "All of the fields are needed",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "button": "Send message",
+    "email-succes": "Email sent successfully",
+    "email-error": "Problems sending the email, try later."
+  }
+}

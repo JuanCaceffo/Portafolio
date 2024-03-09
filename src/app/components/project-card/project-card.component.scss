@@ -1,0 +1,149 @@
+.pjt-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30rem;
+  height: 50rem;
+  .pjt-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    z-index: 2;
+    .pjt-card__type {
+      color: var(--color-violet-fifth);
+      margin-bottom: 0.5em;
+    }
+    .pjt-card__description {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      background-color: #a9a5a516;
+      padding: 2em;
+      border-radius: 1em;
+    }
+    .pjt-card_links {
+      gap: 1em;
+    }
+    .pjt-card__desc-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      font-size: 1.1em;
+    }
+  }
+  .pjt-card__ilstration {
+    width: 100%;
+    height: 70%;
+    margin-top: -7em;
+    .pjt-card__container {
+      position: relative;
+      height: 100%;
+
+      .pjt-card__grad {
+        position: absolute;
+        height: 40em;
+        z-index: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .pjt-card__grad--2 {
+        right: 0;
+      }
+      .pjt-card__img-container {
+        width: 90%;
+        height: 20em;
+        border-radius: 1em;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .pjt-card__img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1em;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 700px) {
+  :host {
+    width: 80%;
+  }
+  .pjt-card {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-width: 50rem;
+    height: 23rem;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .pjt-card__content {
+      width: 50%;
+      min-width: 25rem;
+      gap: 3em;
+      &.reverse {
+        align-items: flex-end;
+      }
+      .pjt-card__type.reverse {
+        text-align: end;
+      }
+      .pjt-card__description {
+        $gradient-color-1: rgba(32, 11, 46, 0.7679446778711485);
+        $gradient-color-2: rgba(113, 39, 186, 0.6474964985994398);
+
+        background: rgb(32, 11, 46);
+        background: linear-gradient(
+          90deg,
+          $gradient-color-1 73%,
+          $gradient-color-2 90%
+        );
+
+        &.reverse {
+          background: linear-gradient(
+            270deg,
+            $gradient-color-1 73%,
+            $gradient-color-2 90%
+          );
+        }
+      }
+      .pjt-card_links {
+        flex-direction: row;
+      }
+    }
+    .pjt-card__ilstration {
+      width: 50%;
+      min-width: 25rem;
+      height: 100%;
+      margin-top: 3em;
+      margin-left: -12em;
+      &.reverse {
+        margin-left: unset;
+        margin-right: -12em;
+      }
+      .pjt-card__container {
+        .pjt-card__img-container {
+          width: 70%;
+          background-color: var(--color-violet-secondary);
+          .pjt-card__img {
+            width: 90%;
+            height: 93%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            &.reverse {
+              left: 0;
+              right: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}

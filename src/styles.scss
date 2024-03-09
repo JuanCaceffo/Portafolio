@@ -1,1 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$portafolio-primary: mat.define-palette(mat.$indigo-palette);
+$portafolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$portafolio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$portafolio-theme: mat.define-light-theme((
+  color: (
+    primary: $portafolio-primary,
+    accent: $portafolio-accent,
+    warn: $portafolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($portafolio-theme);
+
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rubik+Broken+Fax&display=swap');
+
+:root {
+  /* ------------- colors ------------- */
+  --color-violet-primary: #10091A;
+  --color-violet-secondary: #1A0B2E;
+  --color-violet-third: #11071F;
+  --color-violet-fourth: #0B090E;
+  --color-violet-fifth: #7127BA;
+  --color-violet-shadow: #763CAC;
+  /* ------------- Brigth Colors ------------- */
+  --color-clear: hsla(0, 0%, 99%, 1);
+  --color-clear-medium: hsla(0, 0%, 96%, 1);
+  --color-clear-dark: hsla(0, 0%, 94%, 1);
+  --color-clear-2dark: hsla(0, 0%, 84%, 1);
+  /* ------------- Color Information ------------- */
+  --color-succes: #5CB85C;
+  --color-error: #ff3333; 
+  /* ------------- Text & Typeface ------------- */
+  --text-color-2lighter: hsla(207, 20%, 75%, 1);
+  --text-color: hsla(207, 30%, 10%, 1);
+  --typeface-main: 'Preahvihear', sans-serif;
+  --typeface-logo: 'Black Ops One', system-ui;
+ /* ------------- Border Radius ------------- */
+  --border-radius: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-xl: 1.5rem;
+  /* ------------- Box Shadow ------------- */
+  --box-shadow-xs: 0.0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.0rem 0.4rem 1rem -0.2rem rgba(0, 0, 0, 0.2);
+  --box-shadow-md: 0.25rem 0.25rem 1.2rem rgba(0, 0, 0, 0.3);
+  --box-shadow-xl: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  --box-shadow-hover: 0rem 2rem 2rem -1.5rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--typeface-primary);
+  font-size: 10px;
+  color: var(--text-color-2lighter);
+}
+
+body {
+  background-color: var(--color-violet-third);
+  overflow-x: hidden;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+
+a:link, :visited, :hover, :active{
+  text-decoration: none;
+  color: var(--text-color-2lighter);
+}
+
+.file-selected-container--multipe {
+  justify-content: flex-start;
+}
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  margin: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@import url('./app/styles/snackbar.scss');
+@import url('./app/styles/typography.scss');
+@import url('./app/styles/layout.scss');
